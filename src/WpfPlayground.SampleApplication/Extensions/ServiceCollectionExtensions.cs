@@ -12,8 +12,8 @@ namespace WpfPlayground.SampleApplication.Extensions
     {
         public static void ConfigureServices(this IServiceCollection services)
         {
-            services.AddSingleton<MainWindowViewModel>();
-            services.AddSingleton<MainWindow>();
+            //services.AddSingleton<MainWindowViewModel>();
+            //services.AddSingleton<MainWindow>();
         }
     }
 }

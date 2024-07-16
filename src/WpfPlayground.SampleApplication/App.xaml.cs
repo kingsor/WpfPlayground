@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System.IO;
+using System.Reflection;
 using System.Windows;
-using WpfPlayground.SampleApplication.Extensions;
+using WpfPlayground.Sdk;
 
 namespace WpfPlayground.SampleApplication
 {
@@ -11,12 +13,25 @@ namespace WpfPlayground.SampleApplication
     {
         public App()
         {
+            // FIXME: do more robust checking than this
+            // naive approach to blindly try and load
+            // any and all assemblies with no checks!
+            var assemblies = Directory
+                .GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll")
+                .Select(Assembly.LoadFrom)
+                .ToArray();
+            
             ServiceCollection services = new();
-            services.ConfigureServices();
+            services.Scan(x => x
+                .FromAssemblies(assemblies)
+                .AddClasses()
+                .AsSelfWithInterfaces()
+                .WithSingletonLifetime()
+                );
 
             ServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            var mainWindow = serviceProvider.GetRequiredService<MainWindow>();
+            var mainWindow = serviceProvider.GetRequiredService<IMainWindow>();
             MainWindow.Show();
         }
     }
