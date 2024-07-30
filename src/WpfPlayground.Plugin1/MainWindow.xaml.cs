@@ -1,18 +1,21 @@
 ﻿using System.Windows;
-using WpfPlayground.SampleApplication.ViewModels;
+using WpfPlayground.Plugin1.Converters;
+using WpfPlayground.Plugin1.ViewModels;
 using WpfPlayground.Sdk;
 
-namespace WpfPlayground.SampleApplication
+namespace WpfPlayground.Plugin1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window, IMainWindow
     {
-        public MainWindow()
+        public MainWindow(MainWindowViewModel viewModel, IServiceProvider serviceProvider)
         {
+            NicksCoolConverter.ServiceProvider = serviceProvider;
+
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            DataContext = viewModel;
         }
     }
 }

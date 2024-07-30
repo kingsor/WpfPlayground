@@ -32,7 +32,7 @@ namespace WpfPlayground.SampleApplication
             ServiceProvider serviceProvider = services.BuildServiceProvider();
 
             var mainWindow = serviceProvider.GetRequiredService<IMainWindow>();
-            MainWindow.Show();
+            mainWindow.Show();
         }
     }
 
