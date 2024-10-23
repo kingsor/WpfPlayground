@@ -5,11 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfPlayground.SampleApplication", "WpfPlayground.SampleApplication\WpfPlayground.SampleApplication.csproj", "{F99F9A62-4BED-4E7C-A2D9-F467059A5BD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfPlayground.Plugin1", "WpfPlayground.Plugin1\WpfPlayground.Plugin1.csproj", "{702C3FF8-52C6-409E-BCF5-E4938C896500}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{D331128F-6196-4E1E-A790-FCC908E790CD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfPlayground.Sdk", "WpfPlayground.Sdk\WpfPlayground.Sdk.csproj", "{A85D471F-AFD2-43F6-AEB6-AC97B0071EEF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{D331128F-6196-4E1E-A790-FCC908E790CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfPlayground.NpControlsLib", "WpfPlayground.NpControlsLib\WpfPlayground.NpControlsLib.csproj", "{99D52EC0-0FE7-43E8-B7B9-6CC40B317DA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +19,14 @@ Global
 		{F99F9A62-4BED-4E7C-A2D9-F467059A5BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F99F9A62-4BED-4E7C-A2D9-F467059A5BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F99F9A62-4BED-4E7C-A2D9-F467059A5BD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{702C3FF8-52C6-409E-BCF5-E4938C896500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{702C3FF8-52C6-409E-BCF5-E4938C896500}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{702C3FF8-52C6-409E-BCF5-E4938C896500}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{702C3FF8-52C6-409E-BCF5-E4938C896500}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A85D471F-AFD2-43F6-AEB6-AC97B0071EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A85D471F-AFD2-43F6-AEB6-AC97B0071EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A85D471F-AFD2-43F6-AEB6-AC97B0071EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A85D471F-AFD2-43F6-AEB6-AC97B0071EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D331128F-6196-4E1E-A790-FCC908E790CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D331128F-6196-4E1E-A790-FCC908E790CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D331128F-6196-4E1E-A790-FCC908E790CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D331128F-6196-4E1E-A790-FCC908E790CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D52EC0-0FE7-43E8-B7B9-6CC40B317DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D52EC0-0FE7-43E8-B7B9-6CC40B317DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D52EC0-0FE7-43E8-B7B9-6CC40B317DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D52EC0-0FE7-43E8-B7B9-6CC40B317DA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

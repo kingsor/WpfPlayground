@@ -2,7 +2,6 @@
 using System.IO;
 using System.Reflection;
 using System.Windows;
-using WpfPlayground.Sdk;
 
 namespace WpfPlayground.SampleApplication
 {
@@ -11,27 +10,32 @@ namespace WpfPlayground.SampleApplication
     /// </summary>
     public partial class App : Application
     {
+        private readonly ServiceProvider _serviceProvider;
+
         public App()
         {
-            // FIXME: do more robust checking than this
-            // naive approach to blindly try and load
-            // any and all assemblies with no checks!
-            var assemblies = Directory
-                .GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll")
-                .Select(Assembly.LoadFrom)
-                .ToArray();
             
             ServiceCollection services = new();
+            
             services.Scan(x => x
-                .FromAssemblies(assemblies)
+                .FromCallingAssembly()
                 .AddClasses()
-                .AsSelfWithInterfaces()
+                //.AsSelfWithInterfaces()
+                .AsSelf()
                 .WithSingletonLifetime()
                 );
 
-            ServiceProvider serviceProvider = services.BuildServiceProvider();
+            _serviceProvider = services.BuildServiceProvider();
 
-            var mainWindow = serviceProvider.GetRequiredService<IMainWindow>();
+            
+        }
+
+        protected override async void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            var mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
+
             mainWindow.Show();
         }
     }

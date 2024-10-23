@@ -1,8 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Windows.Data;
 
-namespace WpfPlayground.Plugin1.Converters;
+namespace WpfPlayground.SampleApplication.Converters;
 
 public sealed class StringFormattingHelper
 {
@@ -14,20 +13,17 @@ public sealed class StringFormattingHelper
 
 public class NicksCoolConverter : IValueConverter
 {
-    StringFormattingHelper _stringFormattingHelper;
+    private readonly StringFormattingHelper _stringFormattingHelper;
 
-    public NicksCoolConverter()
+    public NicksCoolConverter(StringFormattingHelper stringFormattingHelper)
     {
-        ArgumentNullException.ThrowIfNull(ServiceProvider);
-        _stringFormattingHelper = ServiceProvider.GetRequiredService<StringFormattingHelper>();
+        _stringFormattingHelper = stringFormattingHelper;
     }
-
-    internal static IServiceProvider? ServiceProvider { get; set; }
 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         var numericValue = (double)value;
-        var formatted = $"{numericValue:0.00}";
+        var formatted = _stringFormattingHelper.FormatDouble(numericValue, 3);
         return formatted;
     }
 

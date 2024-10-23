@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfPlayground.SampleApplication.Views.GridLinesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPlayground.SampleApplication.Views"
+        mc:Ignorable="d"
+        Title="GridLinesWindow"
+        Height="450"
+        Width="800">
+    <DockPanel>
+
+        <Grid DockPanel.Dock="Top">
+            <CheckBox Grid.Row="0"
+                      x:Name="ShowGridlines"
+                      Content="Show Grid Lines"
+                      Checked="ShowGridlines_OnChecked"
+                      Unchecked="ShowGridlines_OnUnchecked"></CheckBox>
+            <Slider Grid.Row="0"
+                    ValueChanged="SliderValue_OnValueChanged"
+                    Margin="0 20 0 0"
+                    Minimum="5"
+                    Maximum="100"
+                    TickPlacement="BottomRight"
+                    TickFrequency="5"
+                    IsSnapToTickEnabled="True"
+                    x:Name="SliderValue"
+                    IsEnabled="False"></Slider>
+        </Grid>
+
+        <Canvas Name="ShapeCanvas" />
+
+    </DockPanel>
+</Window>

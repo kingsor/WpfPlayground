@@ -14,7 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WpfPlayground.Sdk\WpfPlayground.Sdk.csproj" />
+    <ProjectReference Include="..\WpfPlayground.NpControlsLib\WpfPlayground.NpControlsLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\GridLinesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

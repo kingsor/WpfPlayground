@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WpfPlayground.NpControlsLib\WpfPlayground.NpControlsLib.csproj" />
     <ProjectReference Include="..\WpfPlayground.Sdk\WpfPlayground.Sdk.csproj" />
   </ItemGroup>
 
