@@ -11,7 +11,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfPlayground.NpControlsLib
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfLoggingDemo", "WpfLoggingDemo\WpfLoggingDemo.csproj", "{4D981A75-3572-47C2-8EB4-79A38596465B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPanAndZoom", "WpfPanAndZoom\WpfPanAndZoom.csproj", "{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfPanAndZoom", "WpfPanAndZoom\WpfPanAndZoom.csproj", "{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B813DD9-3BDF-4C66-8A1E-F8C234BE309E}"
+	ProjectSection(SolutionItems) = preProject
+		..\Readme.md = ..\Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdvancedZoomAndPanSampleApp", "AdvancedZoomAndPanSampleApp", "{FD1B2F40-AF65-4DA8-A590-F4B5601B9AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan", "AdvancedZoomAndPanSampleApp\ZoomAndPan\ZoomAndPan.csproj", "{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedZoomAndPanSample", "AdvancedZoomAndPanSampleApp\AdvancedZoomAndPanSample\AdvancedZoomAndPanSample.csproj", "{120DA64E-D1B0-4D35-96CA-E3986504A1B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +50,21 @@ Global
 		{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{120DA64E-D1B0-4D35-96CA-E3986504A1B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{120DA64E-D1B0-4D35-96CA-E3986504A1B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{120DA64E-D1B0-4D35-96CA-E3986504A1B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{120DA64E-D1B0-4D35-96CA-E3986504A1B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{468ADEDE-6F5E-40C0-99C9-C6DAC4FAC934} = {FD1B2F40-AF65-4DA8-A590-F4B5601B9AFD}
+		{120DA64E-D1B0-4D35-96CA-E3986504A1B9} = {FD1B2F40-AF65-4DA8-A590-F4B5601B9AFD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5FF8D28A-2EE5-487F-AFF5-228130FA6DCB}

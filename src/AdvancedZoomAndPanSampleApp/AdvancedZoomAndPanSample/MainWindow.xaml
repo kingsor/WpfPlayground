@@ -1,0 +1,31 @@
+﻿<Window x:Class="ZoomAndPanSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:zoomAndPanSample="clr-namespace:ZoomAndPanSample"
+        Title="Main Window"
+        Width="1280"
+        Height="960"
+        MinWidth="1280"
+        MinHeight="960"
+        Background="White"
+        Loaded="MainWindow_Loaded">
+    <Grid>
+        
+        <!--<TabControl Name="TabControl">
+            <TabItem Header="ZoomAndPanControl">
+                <zoomAndPanSample:ZoomAndPanControlView />
+            </TabItem>
+            <TabItem Header="ZoomAndPanScrollViewerView">
+                <zoomAndPanSample:ZoomAndPanScrollViewerView />
+            </TabItem>
+        </TabControl>-->
+
+        <!--<zoomAndPanSample:ZoomAndPanControlView x:Name="ZoomAndPanControlView" />-->
+
+        <zoomAndPanSample:ZoomAndPanScrollViewerView x:Name="ZoomAndPanControlView" />
+
+        <!--  Stick a resize grip in the bottom right corner of the window.  -->
+        <ResizeGrip HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom" />
+    </Grid>
+</Window>
