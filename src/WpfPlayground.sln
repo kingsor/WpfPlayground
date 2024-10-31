@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfPlayground.NpControlsLib", "WpfPlayground.NpControlsLib\WpfPlayground.NpControlsLib.csproj", "{99D52EC0-0FE7-43E8-B7B9-6CC40B317DA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLoggingDemo", "WpfLoggingDemo\WpfLoggingDemo.csproj", "{4D981A75-3572-47C2-8EB4-79A38596465B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfLoggingDemo", "WpfLoggingDemo\WpfLoggingDemo.csproj", "{4D981A75-3572-47C2-8EB4-79A38596465B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPanAndZoom", "WpfPanAndZoom\WpfPanAndZoom.csproj", "{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4D981A75-3572-47C2-8EB4-79A38596465B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D981A75-3572-47C2-8EB4-79A38596465B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D981A75-3572-47C2-8EB4-79A38596465B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC167EE3-BA2B-4818-AC9B-D42B69E4E576}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
