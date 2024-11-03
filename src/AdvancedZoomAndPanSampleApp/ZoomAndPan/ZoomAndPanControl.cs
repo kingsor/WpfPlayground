@@ -102,18 +102,18 @@ namespace ZoomAndPan
         {
             base.OnApplyTemplate();
 
-            _content = this.Template.FindName("PART_Content", this) as FrameworkElement;
+            _content = Template.FindName("PART_Content", this) as FrameworkElement;
             if (_content != null)
             {
                 //
                 // Setup the transform on the content so that we can scale it by 'ViewportZoom'.
                 //
-                this._contentZoomTransform = new ScaleTransform(this.InternalViewportZoom, this.InternalViewportZoom);
+                _contentZoomTransform = new ScaleTransform(InternalViewportZoom, InternalViewportZoom);
 
                 //
                 // Setup the transform on the content so that we can translate it by 'ContentOffsetX' and 'ContentOffsetY'.
                 //
-                this._contentOffsetTransform = new TranslateTransform();
+                _contentOffsetTransform = new TranslateTransform();
                 UpdateTranslationX();
                 UpdateTranslationY();
 
@@ -122,8 +122,8 @@ namespace ZoomAndPan
                 // assign this to the content's 'RenderTransform'.
                 //
                 var transformGroup = new TransformGroup();
-                transformGroup.Children.Add(this._contentOffsetTransform);
-                transformGroup.Children.Add(this._contentZoomTransform);
+                transformGroup.Children.Add(_contentOffsetTransform);
+                transformGroup.Children.Add(_contentZoomTransform);
                 _content.RenderTransform = transformGroup;
                 ZoomAndPanControl_EventHandlers_OnApplyTemplate();
             }
@@ -164,7 +164,7 @@ namespace ZoomAndPan
         /// </summary>
         protected override Size ArrangeOverride(Size arrangeBounds)
         {
-            var size = base.ArrangeOverride(this.DesiredSize);
+            var size = base.ArrangeOverride(DesiredSize);
 
             if (_content.DesiredSize != _unScaledExtent)
             {
@@ -671,8 +671,8 @@ namespace ZoomAndPan
             // Update content offset from itself when the size of the viewport changes.
             // This ensures that the content offset remains properly clamped to its valid range.
             //
-            this.ContentOffsetX = this.ContentOffsetX;
-            this.ContentOffsetY = this.ContentOffsetY;
+            ContentOffsetX = ContentOffsetX;
+            ContentOffsetY = ContentOffsetY;
 
             //
             // Tell that owning ScrollViewer that scrollbar data has changed.
@@ -700,16 +700,16 @@ namespace ZoomAndPan
         /// </summary>
         private void UpdateTranslationX()
         {
-            if (this._contentOffsetTransform != null)
+            if (_contentOffsetTransform != null)
             {
-                var scaledContentWidth = this._unScaledExtent.Width * this.InternalViewportZoom;
-                if (scaledContentWidth < this.ViewportWidth)
+                var scaledContentWidth = _unScaledExtent.Width * InternalViewportZoom;
+                if (scaledContentWidth < ViewportWidth)
                     //
                     // When the content can fit entirely within the viewport, center it.
                     //
-                    this._contentOffsetTransform.X = (this.ContentViewportWidth - this._unScaledExtent.Width) / 2;
+                    _contentOffsetTransform.X = (ContentViewportWidth - _unScaledExtent.Width) / 2;
                 else
-                    this._contentOffsetTransform.X = -this.ContentOffsetX;
+                    _contentOffsetTransform.X = -ContentOffsetX;
             }
         }
 
@@ -718,16 +718,16 @@ namespace ZoomAndPan
         /// </summary>
         private void UpdateTranslationY()
         {
-            if (this._contentOffsetTransform != null)
+            if (_contentOffsetTransform != null)
             {
-                var scaledContentHeight = this._unScaledExtent.Height * this.InternalViewportZoom;
-                if (scaledContentHeight < this.ViewportHeight)
+                var scaledContentHeight = _unScaledExtent.Height * InternalViewportZoom;
+                if (scaledContentHeight < ViewportHeight)
                     //
                     // When the content can fit entirely within the viewport, center it.
                     //
-                    this._contentOffsetTransform.Y = (this.ContentViewportHeight - this._unScaledExtent.Height) / 2;
+                    _contentOffsetTransform.Y = (ContentViewportHeight - _unScaledExtent.Height) / 2;
                 else
-                    this._contentOffsetTransform.Y = -this.ContentOffsetY;
+                    _contentOffsetTransform.Y = -ContentOffsetY;
             }
         }
 

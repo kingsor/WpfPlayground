@@ -15,6 +15,8 @@ namespace ZoomAndPanSample
             InitializeComponent();
         }
 
+        public Canvas MainCanvas => ContentCanvas;
+
         /// <summary>
         ///     Specifies the current state of the mouse handling logic.
         /// </summary>
@@ -30,8 +32,8 @@ namespace ZoomAndPanSample
         /// </summary>
         private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            actualContent.Focus();
-            Keyboard.Focus(actualContent);
+            ContentCanvas.Focus();
+            Keyboard.Focus(ContentCanvas);
 
             if ((Keyboard.Modifiers & ModifierKeys.Shift) != 0)
             {
@@ -44,7 +46,7 @@ namespace ZoomAndPanSample
 
             if (_mouseDragging) return;
             _mouseDragging = true;
-            _origContentMouseDownPoint = e.GetPosition(actualContent);
+            _origContentMouseDownPoint = e.GetPosition(ContentCanvas);
             ((Rectangle)sender).CaptureMouse();
             e.Handled = true;
         }
@@ -67,7 +69,7 @@ namespace ZoomAndPanSample
         {
             if (!_mouseDragging) return;
 
-            var curContentPoint = e.GetPosition(actualContent);
+            var curContentPoint = e.GetPosition(ContentCanvas);
             var rectangleDragVector = curContentPoint - _origContentMouseDownPoint;
 
             //
