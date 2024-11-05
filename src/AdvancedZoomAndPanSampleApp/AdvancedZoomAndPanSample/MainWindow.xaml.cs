@@ -24,7 +24,7 @@ namespace ZoomAndPanSample
                 new Tuple<Rect, Color>(new Rect(50,50,80,150), Colors.Blue ),
                 new Tuple<Rect, Color>(new Rect(550,350,80,150), Colors.Green ),
                 new Tuple<Rect, Color>(new Rect(850,850,80,150), Colors.Purple ),
-                new Tuple<Rect, Color>(new Rect(1850,1850,80,150), Colors.Red ),
+                new Tuple<Rect, Color>(new Rect(1850,1550,80,150), Colors.Red ),
             };
 
             _logger = logger;
