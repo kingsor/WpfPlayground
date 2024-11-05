@@ -39,7 +39,7 @@ public class MainWindowViewModel : ViewModelBase
 
     public void AddMessageContent(string message)
     {
-        _logger.LogInformation($"Adding message to MessagesContent: {message}");
+        _logger.LogDebug($"Adding message to MessagesContent: {message}");
 
         var sb = new StringBuilder();
         sb.AppendLine($"{message}");
