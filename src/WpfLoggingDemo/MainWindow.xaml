@@ -5,10 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLoggingDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="900" Width="1440">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
 
+        
+        
         <TextBox x:Name="Messages"
+                 Grid.Row="1"
                  Text="{Binding MessagesContent}"
                  VerticalAlignment="Stretch"
                  HorizontalAlignment="Stretch"

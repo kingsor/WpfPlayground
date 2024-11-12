@@ -28,8 +28,8 @@ namespace WpfPanAndZoom
         {
             Widget w1 = new Widget
             {
-                Width = 200,
-                Height = 150
+                Width = 150,
+                Height = 100
             };
             canvas.Children.Add(w1);
             w1.Header.Text = "Widget 1";
@@ -38,8 +38,8 @@ namespace WpfPanAndZoom
 
             Widget w2 = new Widget
             {
-                Width = 200,
-                Height = 150
+                Width = 150,
+                Height = 100
             };
             canvas.Children.Add(w2);
             w2.Header.Text = "Widget 2";
@@ -49,8 +49,8 @@ namespace WpfPanAndZoom
 
             Widget w3 = new Widget
             {
-                Width = 200,
-                Height = 150
+                Width = 150,
+                Height = 100
             };
             canvas.Children.Add(w3);
             w3.Header.Text = "Widget 3";
