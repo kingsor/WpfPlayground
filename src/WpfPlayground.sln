@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomAndPan", "AdvancedZoomA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedZoomAndPanSample", "AdvancedZoomAndPanSampleApp\AdvancedZoomAndPanSample\AdvancedZoomAndPanSample.csproj", "{120DA64E-D1B0-4D35-96CA-E3986504A1B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragDropSample", "DragDropSample\DragDropSample.csproj", "{AA057A12-E5CC-46A7-873C-E2B8AE9615C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{120DA64E-D1B0-4D35-96CA-E3986504A1B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{120DA64E-D1B0-4D35-96CA-E3986504A1B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{120DA64E-D1B0-4D35-96CA-E3986504A1B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA057A12-E5CC-46A7-873C-E2B8AE9615C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA057A12-E5CC-46A7-873C-E2B8AE9615C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA057A12-E5CC-46A7-873C-E2B8AE9615C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA057A12-E5CC-46A7-873C-E2B8AE9615C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
