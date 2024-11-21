@@ -12,6 +12,8 @@
     <Grid VerticalAlignment="Stretch"
           HorizontalAlignment="Stretch">
         <CustomControls:PanAndZoomCanvas x:Name="canvas"
+                                         Width="8000"
+                                         Height="8000"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Stretch" />
     </Grid>

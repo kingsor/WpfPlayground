@@ -58,6 +58,15 @@ namespace WpfPanAndZoom
             Canvas.SetTop(w3, 400);
             Canvas.SetLeft(w3, 800);
 
+            OtherWidget w4 = new OtherWidget
+            {
+                Width = 150,
+                Height = 100,
+            };
+            canvas.Children.Add(w4);
+            Canvas.SetTop(w4, 300);
+            Canvas.SetLeft(w4, 900);
+
             _logger.LogInformation("Controls inserted");
         }
     }

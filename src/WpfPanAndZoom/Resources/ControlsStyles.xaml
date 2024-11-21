@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:controls="clr-namespace:WpfPanAndZoom.CustomControls"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="{x:Type controls:OtherWidget}">
+        <!--<Setter Property="Canvas.Left"
+                Value="{Binding Path=X}" />
+        <Setter Property="Canvas.Top"
+                Value="{Binding Path=Y}" />-->
+        <Setter Property="Cursor"
+                Value="UpArrow" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Orientation="Horizontal"
+                                Background="Green"
+                                Height="25">
+                        <Viewbox Margin="3">
+                            <Path Fill="Yellow"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  Data="M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,
+                      18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,
+                      0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z" />
+                        </Viewbox>
+                        <Label Content="Inbox"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               VerticalContentAlignment="Center"
+                               HorizontalContentAlignment="Center"
+                               Margin="2 1"
+                               Padding="5"
+                               Foreground="Yellow"
+                               FontSize="10"
+                               FontWeight="Bold" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

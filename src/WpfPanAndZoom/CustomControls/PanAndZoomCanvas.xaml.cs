@@ -133,7 +133,7 @@ public partial class PanAndZoomCanvas : Canvas
 
         if (e.ChangedButton == MouseButton.Right)
         {
-            if (this.Children.Contains((UIElement)e.Source))
+            if (this.Children.Contains((UIElement)e.Source) && e.Source is OtherWidget)
             {
                 _selectedElement = (UIElement)e.Source;
                 Point mousePosition = Mouse.GetPosition(this);
