@@ -8,7 +8,7 @@ The projects in this solution use .NET 8 and WPF.
 
 ### AdvancedZoomAndPanSampleApp
 
-This project is about a custom content control that can be used to zoom and pan its content. More info](./src/AdvancedZoomAndPanSampleApp/README.md)
+This project is about a custom content control that can be used to zoom and pan its content. [More info](./src/AdvancedZoomAndPanSampleApp/README.md)
 
 ### ConsoleApp
 
